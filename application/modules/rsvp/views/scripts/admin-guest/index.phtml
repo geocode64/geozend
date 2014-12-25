@@ -1,0 +1,62 @@
+<h2>List Guests</h2>
+<a href="/admin/rsvp/guest/create">Add Guest</a><br />
+<br />
+<?php if (count($this->records)): ?>
+<div id="records">
+        <table>
+            <tr>
+                <td class="key">
+                    Guest ID
+                </td>
+                <td class="key">
+                    First Name 
+                </td>                
+                <td class="key">
+                    Last Name 
+                </td> 
+                <td class="key">
+                    Family 
+                </td> 
+                <td class="key">
+                    Email 
+                </td> 
+                <td class="key">
+                    RSVP Status 
+                </td> 
+                <td></td>
+                <td></td>
+            </tr>
+            <?php foreach($this->records as $r): ?>
+            <tr>
+                <td>
+                    <?php echo $this->escape($r['gid']); ?>
+                </td>
+                <td>
+                    <?php echo $this->escape($r['firstname']); ?>
+                </td>
+                <td>
+                    <?php echo $this->escape($r['lastname']); ?>
+                </td>
+                <td>
+                    <?php echo $this->escape($r['Wedding_Model_Family']['familyname']); ?>
+                </td>
+                <td>
+                    <?php echo $this->escape($r['email']); ?>
+                </td>
+                <td>
+                    <?php echo $this->escape($r['rsvp']); ?>
+                </td>
+                <td>
+                    <a href="<?php echo $this->url(array('id' => $r['gid']), 'admin-rsvp-guest-edit'); ?>">Edit</a>
+                </td>
+                <td>
+                    <a href="<?php echo $this->url(array('id' => $r['gid']), 'admin-rsvp-guest-delete'); ?>">Delete</a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+</div>
+
+<?php else: ?>
+No records found.
+<?php endif; ?>

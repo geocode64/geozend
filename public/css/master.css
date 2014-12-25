@@ -1,0 +1,123 @@
+body{
+     padding-top: 50px;
+     background-color: #f7f7f7;
+}
+
+body a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #2441F5;
+}
+
+body a:hover {
+  text-decoration: underline;
+}
+
+h1{
+    font-size: 20px;
+}
+
+.question{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.navbar-inverse {
+    background-color: #167bb1;
+    border-color: #10628e;
+}
+
+.navbar-inverse .navbar-brand {
+color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+color: #fff;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+color: #fff;
+/*background-color: #115b83;*/
+background-color: #167bb1;
+}
+
+.please{
+    float: left;
+    padding: 6px 12px;
+     margin: 10px 0;
+}
+
+.next{
+    float: right;
+    margin: 10px 0;
+}
+
+.invite{
+    clear: both;
+}
+
+.invite-text{
+    clear: both;
+}
+
+
+.address{
+    text-align: right;
+    float: right;
+    width:300px;
+}
+
+.wedding-details{
+    float: left;
+    width:300px;
+}
+
+.content{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.response1, .home {
+/*    width: 610px;*/
+}
+
+.response2{
+    background: #efefef;
+    padding: 20px;
+/*    width: 350px;*/
+    margin-top: 20px;
+}
+
+.message{
+    width: 310px;
+    
+}
+
+.guest-name{
+    margin-bottom: 10px;
+}
+
+@media (min-width: 1200px){
+    .container {
+        width: 650px;
+    }
+}
+
+@media (min-width: 768px){
+    body{
+        padding-top: 100px;
+    }
+    
+    .container {
+        width: 650px;
+    }
+}
+
+.navbar-nav {
+clear:both;
+}
+
+
+
+

@@ -1,0 +1,30 @@
+<?php if(isset($_GET['code'])): ?>
+    <?php if($_GET['code'] == $this->guests[0]['Square_Model_Family']['code']): ?>
+    Dear <?php echo $this->names; ?>,<br/>
+    <br/>
+    <div id="rsvp-form">
+        <form method="post" action="<?php echo $this->url(array(), 'rsvp-respond-update'); ?>">
+            <?php foreach($this->guests as $g): ?>
+                <div class="guest-wrapper">
+                    <div class="guest-name"><?php echo $g['firstname']; ?> 
+                    <select name="rsvp[<?php echo $g['gid']; ?>]" id="rsvp">
+                        <option value="attending" selected="selected">Attending</option>
+                        <option value="notattending">Not Attending</option>
+                    </select>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            <br />
+            Leave a message:<br />
+            <textarea name="message"></textarea><br />
+            <input type="submit" name="submit" value="RSVP">
+        </form>  
+    </div>
+     <img src="/images/invite_boats.jpg" />
+
+    <?php else : ?>
+    wrong code!
+    <?php endif; ?>
+<?php else : ?>
+no code!
+<?php endif; ?>

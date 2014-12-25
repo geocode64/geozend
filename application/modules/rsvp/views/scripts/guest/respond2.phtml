@@ -1,0 +1,30 @@
+  
+<div class="response2 content">
+    <h4>Will you attend?</h4>
+    <div class="instructions">
+        Sunday, November 23rd at 12:00 PM <br />
+        RAN Sailing Association <br />
+        Rushcutters Bay, Sydney<br />
+        <br/>
+    </div>  
+    <div id="rsvp-form">
+        <form method="post" action="<?php echo $this->url(array(), 'rsvp-respond-update'); ?>">
+            <?php foreach($this->guests as $g): ?>
+                <div class="guest-wrapper">
+                    <div class="guest-name">
+                        <?php echo $g['firstname']; ?>
+                    <select name="rsvp[<?php echo $g['gid']; ?>]" id="rsvp">
+                        <option value="attending" selected="selected">Attending</option>
+                        <option value="notattending">Not Attending</option>
+                    </select>
+                        <input type="hidden" name="names[<?php echo $g['gid']; ?>]" value="<?php echo $g['firstname']; ?>">
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            <br />
+            <!--<textarea name="message"></textarea> <br />-->
+            <input type="hidden" name="email" value="<?php echo $this->email; ?>">
+            <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+        </form>  
+    </div>
+</div>

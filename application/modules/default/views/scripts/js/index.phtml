@@ -1,0 +1,13 @@
+<script type="text/javascript">
+
+function setName(obj){
+    obj.name = 'Nicolas';
+    obj = new Object();
+    obj.name = 'Greg';
+}
+
+var person = new Object();
+setName(person);
+alert(person.name);
+
+</script>
